@@ -3,24 +3,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int lastId =1;
         System.out.println("---게시판 앱---");
-        System.out.println("명령)등록");
+
 
         while(true){
-            System.out.print("제목 :");
-            String input = scanner.nextLine();
-            if(input.equals("제목1")){
+            System.out.println("명령)등록");
+            String message = scanner.nextLine();
+
+            if(message.equals("종료")){
                 break;
+            }else if(message.equals("등록")){
+                System.out.print("제목 :");
+                String title = scanner.nextLine().trim();
+
+                System.out.print("내용 :");
+                String contents = scanner.nextLine().trim();
+                System.out.printf("%d번 게시물이 등록되었습니다.\r", lastId);
+
             }
+            lastId++;
         }
 
-        while(true){
-            System.out.print("내용 :");
-            String input2 = scanner.nextLine();
-            if(input2.equals("내용1")){
-                break;
-            }
-        }
+
         System.out.println("명령)종료");
         /*
         int sum = 0;

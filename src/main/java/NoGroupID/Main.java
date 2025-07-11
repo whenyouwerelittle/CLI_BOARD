@@ -2,20 +2,26 @@ package NoGroupID;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        /*
-            종료
-            ==게시판앱
-            명령 종료
-        */
         Scanner scanner = new Scanner(System.in);
-        System.out.println("---게시글---");
+        System.out.println("---게시판 앱---");
+        System.out.println("명령)등록");
+
         while(true){
-            System.out.print("입력: ");
+            System.out.print("제목 :");
             String input = scanner.nextLine();
-            if(input.equals("종료")){
+            if(input.equals("제목1")){
                 break;
             }
         }
+
+        while(true){
+            System.out.print("내용 :");
+            String input2 = scanner.nextLine();
+            if(input2.equals("내용1")){
+                break;
+            }
+        }
+        System.out.println("명령)종료");
         /*
         int sum = 0;
         String input;

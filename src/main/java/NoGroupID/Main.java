@@ -1,5 +1,5 @@
+package NoGroupID;
 import java.util.Scanner;
-// package NoGroupID;
 public class Main {
     public static void main(String[] args) {
         /*

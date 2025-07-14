@@ -1,4 +1,4 @@
-package NoGroupID;
+package article;
 
 public class Article {
     private int id;

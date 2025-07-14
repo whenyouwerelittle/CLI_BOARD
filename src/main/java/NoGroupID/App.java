@@ -5,24 +5,21 @@ public class App {
     App(Scanner sc1){
         this.sc1 = sc1;
     }
-
     public void run(){
         int lastId =1;
-        System.out.println("---게시판 앱---");
+        System.out.println("---Command line board---");
+        System.out.println("Prompt : write");
 
         while(true){
-            System.out.println("명령)등록");
             String message = sc1.nextLine();
-
-            if(message.equals("종료")){
+            if(message.equals("end")){
                 break;
-            }else if(message.equals("등록")){
-                System.out.print("제목 :");
+            }else if(message.equals("write")){
+                System.out.print("Title :");
                 String title = sc1.nextLine().trim();
-
-                System.out.print("내용 :");
+                System.out.print("Contents :");
                 String contents = sc1.nextLine().trim();
-                System.out.printf("%d번 게시물이 등록되었습니다.\r", lastId);
+                System.out.printf("%d message is added in the board.\r", lastId);
                 lastId++;
             }
 

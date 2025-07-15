@@ -1,20 +1,19 @@
 import article.Article;
 import article.ArticleController;
 import system.SystemController;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class App {
     Scanner sc;
-    ArticleController articleController;
-    SystemController systemController;
+    ArticleController articleController;    // CRUD
+    SystemController systemController;      // exit
 
-    App(Scanner sc) {
-        this.sc = sc;
-        articleController = new ArticleController(sc);
-        systemController = new SystemController();
+    App(Scanner sc) {   // App Constructor method
+        this.sc = sc;   // From Main class
+        articleController = new ArticleController(sc);  // CRUD 객체 생성
+        systemController = new SystemController();      // Exit 객체 생성
     }
 
     public void run() {

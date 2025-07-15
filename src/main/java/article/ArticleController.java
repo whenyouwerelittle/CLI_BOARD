@@ -1,12 +1,11 @@
 package article;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class ArticleController {
     Scanner sc;
-    List<Article> articleList = new ArrayList<>();
+    List<Article> articleList = new ArrayList<>(); //최초 선언
     int lastId = 1;
 
     public ArticleController(Scanner sc) {
@@ -23,7 +22,11 @@ public class ArticleController {
         articleList.add(article);
 
         System.out.printf("%d번 게시글이 등록되었습니다.\n", lastId);
+        // System.out.println(articleList.getFirst());     // printout article.Article@548c4f57
+        System.out.println(articleList.get(0));     // printout article.Article@548c4f57
+        //System.out.println(articleList.get(0).getClass()); // class article.Article
         lastId++;
+        // System.out.println(articleList.); article.Article@548c4f57
     }
 
     public void list() {

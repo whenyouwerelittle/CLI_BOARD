@@ -123,6 +123,11 @@ public class DBConnection {
         try {
             stmt = connection.createStatement();
             affectedRows = stmt.executeUpdate(sql);
+            /*
+            executeUpdate() 메서드는 SQL INSERT, UPDATE, DELETE 문과 같이
+            데이터베이스 테이블의 내용을 변경하는 SQL 쿼리를 실행할 때 사용됩니다.
+            이 메서드는 영향을 받은 행의 수를 정수로 반환합니다.
+            */
         } catch (SQLException e) {
             System.err.printf("[SQL 예외, SQL : %s] : %s\n", sql, e.getMessage());
         }
@@ -150,7 +155,7 @@ public class DBConnection {
         try {
             Statement stmt = connection.createStatement();
             stmt.execute(sql, Statement.RETURN_GENERATED_KEYS);
-            ResultSet rs = stmt.getGeneratedKeys();
+            ResultSet rs = stmt.getGeneratedKeys();     // autoincrement 값을 호출하는
 
             if (rs.next()) {
                 id = rs.getInt(1);

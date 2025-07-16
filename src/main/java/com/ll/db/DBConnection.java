@@ -23,6 +23,7 @@ public class DBConnection {
         try {
             connection = DriverManager.getConnection(url, user, password);
             Class.forName(driverName);
+            // System.out.println(Class.forName(driverName));  //class com.mysql.cj.jdbc.Driver
             System.out.println("연결성공");
         } catch (SQLException e) {
             System.err.printf("[SQL 예외] : %s\n", e.getMessage());

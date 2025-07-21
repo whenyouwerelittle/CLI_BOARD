@@ -4,18 +4,21 @@ import java.util.Map;
 
 public class Article {
     private int id;
-    private String subject;
+    private String title;
     private String content;
+    private int contentType;
 
-    public Article(int id, String subject, String content) {
+    public Article(int id, int contentType, String subject, String content) {
         this.id = id;
-        this.subject = subject;
+        this.contentType = contentType;
+        this.title = title;
         this.content = content;
     }
 
     public Article(Map<String, Object> row) {
         this.id = (int)row.get("id");
-        this.subject = (String)row.get("subject");
+        this.contentType = (int)row.get("contentType");
+        this.title = (String)row.get("title");
         this.content = (String)row.get("content");
     }
 
@@ -24,17 +27,18 @@ public class Article {
     }
 
     String getSubject() {
-        return this.subject;
+        return this.title;
     }
-
     String getContent() {
         return this.content;
     }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
+    int getContentType() {
+        return this.contentType;
     }
 
+    public void setSubject(String subject) {
+        this.title = title;
+    }
     public void setContent(String content) {
         this.content = content;
     }

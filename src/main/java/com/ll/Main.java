@@ -1,9 +1,13 @@
 package com.ll;
 public class Main {
     public static void main(String[] args) {
+        String login = new String("1");
+        // String loginId = new String();
+
         Container.init();
         new App().run();
         Container.close();
+        // System.out.println(loginId);
     }
 }
 /*

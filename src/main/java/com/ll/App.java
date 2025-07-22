@@ -27,9 +27,9 @@ public class App {
         System.out.println("input exit : Close bbs");
         System.out.println("input list : Print out articles.");
         System.out.println("input logIn : log in before CUD BBS");
-        System.out.println("input del?id=ID_NUM : Delete an articles with id");
+        System.out.println("input del?id=ID_NUM : Delete an articles with id number");
         System.out.println("input new : Add an article.");
-        System.out.println("input modify?id=ID_NUM : Edit an articles with id");
+        System.out.println("input modify?id=ID_NUM : Edit an articles with id number");
 
         while (true) {
             System.out.print("command) ");
